@@ -19,7 +19,14 @@ bindkey -e
 # Plugins (Antidote)
 # =============================================================================
 
-source ~/.antidote/antidote.zsh
+if command -v brew >/dev/null; then
+  source "$(brew --prefix)/share/antidote/antidote.zsh"
+elif test -d /usr/share/zsh-antidote/antidote.zsh; then
+  source /usr/share/zsh-antidote/antidote.zsh
+else
+  source ~/.antidote/antidote.zsh
+fi
+
 antidote load < ~/.zsh_plugins.txt
 
 
@@ -80,8 +87,13 @@ if command -v brew >/dev/null; then
   eval "$(mise activate zsh)"
 fi
 
-eval "$(dua completions zsh)"
+if command -v dua &> /dev/null; then
+  eval "$(dua completions zsh)"
+fi
 
+if command -v direnv &> /dev/null; then
+  eval "$(direnv hook zsh)"
+fi
 eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
