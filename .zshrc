@@ -82,7 +82,6 @@ fi
 
 eval "$(dua completions zsh)"
 
-eval "$(direnv hook zsh)"
 eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
