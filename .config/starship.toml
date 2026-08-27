@@ -1,0 +1,73 @@
+add_newline = true
+
+# # A minimal left prompt
+# format = "$directory$character"
+
+# # Move the rest of the prompt to the right
+# right_format = """$all"""
+
+[line_break]
+disabled = false
+
+[custom.ansible]
+command = "ansible --version | head -n 1 | cut -d' ' -f2- | sed 's/\\[core \\(.*\\)\\]/\\1/'"
+description = "Shows the installed Ansible version"
+when = "[[ -f ansible.cfg ]]"
+format = "via [🅐 $output]($style) "
+style = "bold #56b6c2"  # Teal (One Dark)
+
+[character]
+success_symbol = "[❯](bold #98c379)"  # Green Left Arrow (Success, One Dark Green)
+error_symbol = "[❯](bold #e06c75)"    # Red Left Arrow (Failure, One Dark Red)
+
+# Directory module
+[directory]
+style = "bold #abb2bf"                # Light Gray (One Dark)
+truncation_length = 3
+
+# Git branch module
+[git_branch]
+style = "bold #61afef"                # Sky Blue (One Dark)
+
+# Git status module
+[git_status]
+conflicted = "[✗](bold #e06c75)"      # Bright Red (One Dark)
+ahead = "[⇡](bold #98c379)"           # Green (One Dark)
+behind = "[⇣](bold #56b6c2)"          # Teal (One Dark)
+style = "bold #e5c07b"                # Yellow (One Dark)
+
+# Python module
+[python]
+style = "bold #56b6c2"                # Teal (One Dark)
+detect_extensions = []
+
+# Node.js module
+[nodejs]
+style = "bold #98c379"                # Light Green (One Dark)
+
+# Shell name module
+[shell]
+style = "bold #c678dd"                # Purple (One Dark)
+
+# Memory usage module
+[memory_usage]
+style = "bold #e5c07b"                # Yellow (One Dark)
+format = "Memory: [$used/$total]($style)"
+
+# Battery module
+[battery]
+full_symbol = "🔋 "
+charging_symbol = "⚡ "
+discharging_symbol = "🔋 "             # Sky Blue (One Dark)
+
+# Time module
+[time]
+format = "[🕒 %T](bold #abb2bf)"      # Light Gray (One Dark)
+
+# Kubernetes module
+[kubernetes]
+style = "bold #c678dd"                # Purple (One Dark)
+
+# Package module
+[package]
+style = "bold #e06c75"                # Bright Red (One Dark)
