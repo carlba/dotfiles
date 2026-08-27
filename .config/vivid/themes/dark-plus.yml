@@ -1,0 +1,123 @@
+# Visual Studio Code "Dark+" theme for vivid
+#
+# Install: ~/.config/vivid/themes/dark-plus.yml
+# Use:     export LS_COLORS="$(vivid generate dark-plus)"
+#
+# Schema matched against vivid's bundled themes/molokai.yml — vivid's
+# deserializer expects every core.* key present (empty categories as `{}`),
+# a flat one-level nesting under text/programming, and no bg/fg specials
+# other than background_color.
+
+colors:
+  background_color: '1e1e1e' # editor.background
+
+  blue: '569cd6' # keywords
+  light_blue: '9cdcfe' # variables, parameters
+  teal: '4ec9b0' # types, classes
+  green: '6a9955' # comments
+  light_green: 'b5cea8' # numeric constants
+  yellow: 'dcdcaa' # function names
+  tan: 'd7ba7d' # regex escapes, tag attributes
+  orange: 'ce9178' # strings
+  purple: 'c586c0' # control-flow keywords
+  magenta: 'd670d6' # terminal.ansiBrightMagenta
+  red: 'f44747' # errors
+  dark_red: 'd16969' # regex literals
+  gray: '808080' # dimmed / disabled
+  black: '1e1e1e' # used for inverted text on bright backgrounds
+
+core:
+  normal_text: {}
+  regular_file: {}
+  reset_to_normal: {}
+  directory:
+    foreground: blue
+    font-style: bold
+  symlink:
+    foreground: teal
+  multi_hard_link:
+    foreground: light_blue
+  fifo:
+    foreground: black
+    background: tan
+  socket:
+    foreground: black
+    background: purple
+  door:
+    foreground: black
+    background: purple
+  block_device:
+    foreground: black
+    background: tan
+  character_device:
+    foreground: black
+    background: tan
+  broken_symlink:
+    foreground: black
+    background: red
+  missing_symlink_target:
+    foreground: black
+    background: red
+  setuid:
+    foreground: black
+    background: red
+  setgid:
+    foreground: black
+    background: dark_red
+  file_with_capability:
+    foreground: black
+    background: purple
+  sticky_other_writable:
+    foreground: black
+    background: light_green
+  other_writable:
+    foreground: black
+    background: teal
+  sticky:
+    foreground: black
+    background: blue
+  executable_file:
+    foreground: light_green
+    font-style: bold
+
+text:
+  special:
+    foreground: black
+    background: tan
+  todo:
+    foreground: red
+    font-style: bold
+  licenses:
+    foreground: gray
+  configuration:
+    foreground: light_blue
+  other:
+    foreground: tan
+
+markup:
+  foreground: teal
+
+programming:
+  source:
+    foreground: yellow
+  tooling:
+    foreground: purple
+  continuous-integration:
+    foreground: green
+
+media:
+  foreground: purple
+
+office:
+  foreground: tan
+
+archives:
+  foreground: orange
+  font-style: underline
+
+executable:
+  foreground: light_green
+  font-style: bold
+
+unimportant:
+  foreground: gray
