@@ -20,6 +20,9 @@ style = "bold #56b6c2"  # Teal (One Dark)
 success_symbol = "[❯](bold #98c379)"  # Green Left Arrow (Success, One Dark Green)
 error_symbol = "[❯](bold #e06c75)"    # Red Left Arrow (Failure, One Dark Red)
 
+[container]
+disabled = true
+
 # Directory module
 [directory]
 style = "bold #abb2bf"                # Light Gray (One Dark)
